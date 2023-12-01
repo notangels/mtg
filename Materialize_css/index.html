@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="/img/icon.png" type="image/x-icon">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="/css/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <script src="/js/materialize.js"></script>
+    <script type="text/javascript" src="/js/app.js"></script>
+    <script type="text/javascript" src="/js/ui.js"></script>
+    <script type="module" src="/js/db.js"></script>
+    <script type="module" src="/js/auth.js"></script>
+    <link rel="manifest" href="manifest.json">
+    <title>Moss-Thorns Gallery of Art</title>
+</head>
+
+
+<body>
+
+  <header>
+    <nav>
+      <div class="amber nav-wrapper">
+        <a href="#!" class="brand-logo">Moss-Thorns Gallery of Art</a>
+        <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>
+        <ul class="right hide-on-med-and-down">
+          <li><a href="#home">Home</a></li>
+          <li><a href="#exhibits">Exhibits</a></li>
+          <li><a href="#contact">Contact</a></li>
+          <li class="logged-in"> <a href="#" class="waves-effect modal-trigger" data-target="modal-account">Account</a>
+        </li>
+        <li class="logged-in">
+            <a href="#modal-logout" class="waves-effect" id="logout">Logout</a>
+        </li>
+        <li class="logged-out">
+            <a href="#modal-login" class="waves-effect modal-trigger" data-target="modal-login">Login</a>
+        </li>
+        <li class="logged-out">
+            <a href="#modal-signup" class="waves-effect modal-trigger" data-target="modal-signup">Sign up</a>
+        </li>
+        </span>
+        <li>
+            <div class="divider"></div>
+        </li>
+        </ul>
+        <ul class="sidenav" id="mobile-demo">
+          <li><a href="#home">Home</a></li>
+          <li><a href="#exhibits">Exhibits</a></li>
+          <li><a href="#contact">Contact</a></li>
+          <li><a href="#modal-signup" class="black-text modal-trigger" data-targets="modal-signup">Sign Up</a></li>
+        </ul>
+      </div>
+    </nav>
+  </header>
+
+  <div id="modal-signup" class="modal">
+    <div class="modal-content">
+      <h4> Sign Up</h4><br />
+      <form id="signup-form">
+        <div class="input-field">
+          <input type="email" id="signup-email" required>
+          <label for="signup-email">Email Address</label>
+        </div>
+        <div class="input-field">
+          <input type="password" id="signup-password" required>
+          <label for="signup-password"> Choose password</label>
+        </div>
+        <button class="btn blue darken-2 z-depth-0">Sign Up</button>
+      </form>
+    </div>
+</div>
+
+<div id="modal-login" class="modal">
+  <div class="modal-content">
+      <h4>Login</h4><br />
+      <form id="login-form">
+          <div class="input-field">
+              <input type="email" id="login-email" required />
+              <label for="login-email">Email address</label>
+          </div>
+          <div class="input-field">
+              <input type="password" id="login-password" required />
+              <label for="login-password">Your password</label>
+          </div>
+          <button class="btn yellow darken-2 z-depth-0">Login</button>
+      </form>
+  </div>
+</div>
+
+<div id="modal-account" class="modal">
+        <div class="modal-content center-align">
+            <h4>Account details</h4><br />
+            <div class="account-details"></div>
+        </div>
+    </div>
+</div>
+
+<section class="container section scrollspy" id="home">
+  <div class="row">
+    <div class="col s12 14">
+      <h4 class="amber-text" style="margin-bottom: 0"> Fort Hays State University</h4>
+      <h4 class="amber-text" style="margin-top: 0"> Moss-Thorns Gallery of Art</h4>
+        <p>For many years, Art and Design Programs were spread out among a number of buildings and never had a formal gallery.
+        In 1969, John C. Thorns, Jr. first presented his vision to the college administration for a regional art museum with educational
+        laboratories to house the Department of Art. With the completion of Rarick Hall in the spring of 1981, Thorns' vision was realized.</p>
+        <p>When it first opened, the gallery was called the Visual Arts Center Gallery. It was rededicated the Moss-Thorns Gallery of Art
+        on October 11, 1987, during the annual homecoming activities. The gallery was renamed for Joel C. Moss (chair of the department from
+        1946 to 1973) and John C. Thorns, Jr. (chair from 1973 to 1990).</p>
+        <p>Connected to the Center for Art & Design, the Moss-Thorns Gallery (& The Patricia A. Schmidt Gallery Lobby) is home to various
+        student art exhibits, faculty shows and traveling exhibits throughout the year. During the fall and spring, the gallery is open Monday - Friday, 9 a.m.-4 p.m.     
+        </p>
+    </div>
+  </div>
+</section>
+
+<div class="parallax-container">
+  <div class="parallax">
+    <img src="/img/gallery.jpg" alt="" class="responsive-img">
+  </div>
+</div>
+
+<section class="container section scrollspy">
+  <div class="row">
+    <div class="col s12 16">
+      <h2 class="amber-text center" id= "exhibits"> Exhibits </h2>
+        <img class="materialboxed responsive-img" width="200" src="/img/art1.jpeg">
+          <h5 class="black-text"> "Cruisin' for a Bruisin'" </h5> 
+    </div>
+  </div>
+</section>
+
+<section class="container section" id="">
+  <div class="row">
+    <div class="col s12 16">
+        <img class="materialboxed right" width="200" src="/img/art2.jpeg"> 
+    </div>
+    <h5 class="black-text right"> "Indigo - Red Rain" </h5>
+  </div>
+</section>
+
+<section class="container section " id="">
+  <div class="row">
+    <div class="col s12 16">
+        <img class="materialboxed responsive-img" width="200" src="/img/art3.jpeg"> 
+    </div>
+    <h5 class="black-text"> "Best In Spirits Award" </h5>
+  </div>
+</section>
+
+<div class="parallax-container">
+  <div class="parallax">
+    <img src="/img/tiger.jpg" alt="" class="responsive-img">
+  </div>
+</div>
+
+
+
+
+<footer class="page-footer black darken scrollspy" id="contact">
+  <div class="container">
+    <div class="row">
+      <div class="col l6 sl2">
+        <h5>Contact Us</h5>
+        <hr>
+          <p style="margin-bottom:0">Art and Design Programs</p>
+          <p style="margin : 0; padding-top:0;">Fort Hays State University</p>
+          <p style="margin : 0; padding-top:0;">600 Park Street</p>
+          <p style="margin : 0; padding-top:0;">Schmidt Foundation Center for Art and Design Room 119</p>
+          <p style="margin : 0; padding-top:0;">Phone:  785-628-4247</p>
+      </div>
+      <div class="col l4 offset-l2 sl2">
+        <h5 class="white-text">Connect</h5>
+        <hr>
+        <ul>
+          <li><a class="grey-text text-lighten-3" href="https://m.facebook.com/p/Moss-Thorns-Gallery-of-Art-and-Patricia-A-Schmidt-Gallery-100055085186744/"target="_blank">Facebook</a></li>
+          <li><a class="grey-text text-lighten-3" href=mailto:"moss.thorns.gallery@fhsu.edu">E-Mail</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</footer>
+
+
+</body>
+</html>
